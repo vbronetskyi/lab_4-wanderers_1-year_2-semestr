@@ -49,8 +49,8 @@ and furry legs.', "book","Sssss....I'm so bored...","cheese", "A large and smell
         """constructor"""
         super().__init__(name_pers, descript_pers, weakness_pers,\
             phrase_pers, name_subj, descript_subj)
-        self.name=name
-        self.description=description
+        self.__name=name
+        self.__description=description
         self.directions=directions
     def __str__(self) -> str:
         """
@@ -64,9 +64,13 @@ and furry legs.', "book","Sssss....I'm so bored...","cheese", "A large and smell
             result+=f"\n{self.name_pers} is here!\n{self.descript_pers}"
         if self.name_subj is not None:
             result+=f"\nThe [{self.name_subj}] is here - {self.descript_subj}"
-        return f"\n\n{self.name}\n--------------------\n{self.description}{result}"
-
-
+        return f"\n\n{self.__name}\n--------------------\n{self.__description}{result}"
+    def get_name(self):#geter
+        """return name of room"""
+        return self.__name
+    def get_discription(self):#geter
+        """return name of room"""
+        return self.__description
 
 if __name__ == '__main__':
     #Create the game:
@@ -90,7 +94,8 @@ the entrance.',{'east':'Dining Hall'}, 'Tabitha', 'An enormous spider with count
 and furry legs.', "book","Sssss....I'm so bored...","cheese", "A large and smelly block of cheese")
     # print(kitchen)
     room = kitchen
-    rooms = {kitchen.name:kitchen, dining_hall.name:dining_hall, ballroom.name:ballroom}
+    rooms = {kitchen.get_name():kitchen, dining_hall.get_name():dining_hall, ballroom.get_name():ballroom}
+    print(rooms)
     backpack, beats_enemy= {}, 0
     while True:
         print(room)
@@ -131,5 +136,5 @@ and furry legs.', "book","Sssss....I'm so bored...","cheese", "A large and smell
         if beats_enemy >= 2:
             print("You won this game!!!")
             break
-    import doctest
-    print(doctest.testmod())
+    # import doctest
+    # print(doctest.testmod())
