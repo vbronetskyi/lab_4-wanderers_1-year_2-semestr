@@ -166,7 +166,7 @@ if __name__ == '__main__':
         elif comand == 'bag':
             print('Your bag contains: ')
             for elem in backpack:
-                print(f'{elem} - {backpack[elem].name}')
+                print(f'{elem} - {backpack[elem]}')
         elif comand == "exit":
             break
 
