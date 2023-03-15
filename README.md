@@ -23,6 +23,8 @@ in module main.py:
 
 ![image](https://user-images.githubusercontent.com/116158735/225193421-285bad8f-ad93-4be4-9f0a-1bca03df4604.png)
 
+5) exid - вийти з гри.
+
 В результаті отримавши 2 перемоги, ви виграєте гру!:
 
 ![image](https://user-images.githubusercontent.com/116158735/225193698-8eaf4684-19e1-474b-b63e-3b55c5409086.png)
