@@ -1,6 +1,7 @@
 # lab_4-wanderers_1-year_2-semestr
 in module main.py:
 Гра "блукачки", для пройденняякої потрібно ознайомитись із інструкцією та прикладом ведення гри:
+
 Для початку Ви опиняєтесь на кухні:
 
 ![image](https://user-images.githubusercontent.com/116158735/225191556-b6988834-82c1-466c-817f-7cf44d2bebba.png)
