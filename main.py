@@ -2,16 +2,23 @@
 
 class Subject:
     """
-    inform about character
+    inform about subject
+    >>> cheese = ("cheese", "A large and smelly block of cheese")
+    >>> dining_hall.descript_subj
+    "A really good book entitled 'Knitting for dummies'"
     """
     def __init__(self, name_subj, descript_subj) -> None:
         """Construct"""
-        self.name_subj =name_subj
+        self.name_subj = name_subj
         self.descript_subj = descript_subj
 
 class Enemy(Subject):
     """
     inform about character
+    >>> tabitha = ('Tabitha', 'An enormous spider with countless eyes \
+and furry legs.', "book","Sssss....I'm so bored...","cheese", "A large and smelly block of cheese")
+    >>> dining_hall.name_pers
+    'Dave'
     """
     def __init__(self, name_pers, descript_pers, weakness_pers, phrase_pers,\
         name_subj, descript_subj) -> None:
@@ -22,11 +29,19 @@ class Enemy(Subject):
         self.weakness_pers = weakness_pers
         self.phrase_pers = phrase_pers
     def __str__(self) -> str:
+        """write name and charecteristics of the character"""
         return f"\n{self.name_pers} is here!\n{self.descript_pers}"
 
 class Room(Enemy):
     """
     inform about room
+    >>> ballroom = Room('Ballroom', 'A vast room with a shiny wooden floor. Huge candlesticks guard \
+the entrance.',{'east':'Dining Hall'}, 'Tabitha', 'An enormous spider with countless eyes \
+and furry legs.', "book","Sssss....I'm so bored...","cheese", "A large and smelly block of cheese")
+    >>> ballroom.name
+    'Ballroom'
+    >>> ballroom.directions
+    {'east': 'Dining Hall'}
     """
     def __init__(self, name, description, directions={}, name_pers = None,\
         descript_pers = None, weakness_pers=None, phrase_pers = None,\
@@ -39,7 +54,7 @@ class Room(Enemy):
         self.directions=directions
     def __str__(self) -> str:
         """
-        str
+        write the main bloc info about room
         """
         result = ""
         if self.directions != {}:
@@ -111,8 +126,10 @@ and furry legs.', "book","Sssss....I'm so bored...","cheese", "A large and smell
                 print(f"You put the {room.name_subj} in your backpack")
                 backpack[room.name_subj] = room.descript_subj
                 room.name_subj, room.descript_subj = None, None
+        elif comand == "exit":
+            break
         if beats_enemy >= 2:
             print("You won this game!!!")
             break
-    # import doctest
-    # print(doctest.testmod())
+    import doctest
+    print(doctest.testmod())
