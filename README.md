@@ -1,6 +1,4 @@
 # lab_4-wanderers_1-year_2-semestr
-
-# lab_4-wanderers_1-year_2-semestr
 in module main.py:
 Гра "блукачки", для пройденняякої потрібно ознайомитись із інструкцією та прикладом ведення гри:
 
